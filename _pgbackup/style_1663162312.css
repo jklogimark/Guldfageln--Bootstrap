@@ -108,14 +108,18 @@ a:hover {
 }
 
 .form-control:focus {
-    background-color: #141e3c;
-    color: #D2AA5A;
     border: 1px solid #141e3c;
     outline: none !important;
     outline-width: 0 !important;
     box-shadow: none;
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
+}
+
+.form-control-labels {
+    font-size: 1.8rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
 }
 
 /* **** MODAL DESIGN **** */
