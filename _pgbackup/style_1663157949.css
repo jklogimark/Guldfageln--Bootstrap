@@ -8,7 +8,6 @@ body {
     font-size: 1.6rem;
     font-weight: 400;
     color: #161e3a;
-    overflow-x: hidden;
 }
 
 a {
@@ -147,6 +146,6 @@ a:hover {
         font-size: 1.2rem;
         margin-top: 0.5rem;
         margin-bottom: 0.5rem;
-        padding: 1.2rem 5rem;
+        padding: 1.2rem 0rem;
     }
 }

@@ -13,7 +13,11 @@
         <link href="style.css" rel="stylesheet"/>
     </head>
     <body>
+        <!-- Wrapper = Do not delete! It holds the whole design together -->
+        <!-- ================================================= -->
         <div id="wrapper" title="main-container" class="container-fluid m-0 p-0">
+            <!-- Add to database modal = Should be used as a separate component in Blazor -->
+            <!-- =================== -->
             <div class="fade modal" id="add-to-database-modal" tabindex="-1" role="dialog" aria-hidden="true" data-bs-backdrop="true" data-bs-focus="false"> 
                 <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg"> 
                     <div class="modal-content"> 
@@ -30,6 +34,8 @@
                     </div>                     
                 </div>                 
             </div>
+            <!-- Change database modal = Should be used as a separate component in Blazor -->
+            <!-- =================== -->
             <div class="fade modal" id="change-database-modal" tabindex="-1" role="dialog" aria-hidden="true" data-bs-backdrop="true" data-bs-focus="false"> 
                 <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg"> 
                     <div class="modal-content"> 
@@ -46,6 +52,8 @@
                     </div>                     
                 </div>                 
             </div>
+            <!-- Support modal = Should be used as a separate component in Blazor -->
+            <!-- ============ -->
             <div class="fade modal pg-show-modal" id="support-modal" tabindex="-1" role="dialog" aria-hidden="true" data-bs-backdrop="true" data-bs-focus="false"> 
                 <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg"> 
                     <div class="modal-content"> 
@@ -79,16 +87,20 @@
                     </div>                     
                 </div>                 
             </div>
+            <!-- Header container-->
+            <!-- ============== -->
             <div class="container-fluid header">
                 <div class="align-items-center d-flex flex-row h-100 justify-content-center row vw-100">
-                    <div class="align-items-center col-10 col-lg-4 col-md-5 col-sm-6 col-xl-3 col-xxl-2 d-flex h-100 justify-content-center"> 
+                    <div class="align-items-center col-8 col-lg-4 col-md-5 col-sm-6 col-xl-3 col-xxl-2 d-flex h-100 justify-content-center"> 
                         <img width="100%" src="images/logo-devis.png"/>
                     </div>
                 </div>
             </div>
+            <!-- Button container-->
+            <!-- ============== -->
             <div class="button-container container-fluid ">
                 <div class="align-items-center d-flex flex-row h-100 justify-content-center row vw-100">
-                    <div class="align-items-lg-center col-8 col-lg-12 col-md-4 col-sm-6 d-flex d-lg-flex flex-column flex-lg-row h-100 justify-content-center justify-content-lg-center"> 
+                    <div class="align-items-lg-center col-6 col-lg-12 col-md-4 col-sm-6 d-flex d-lg-flex flex-column flex-lg-row h-100 justify-content-center justify-content-lg-center"> 
                         <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#add-to-database-modal" title="Lägg till en ny artikel i databasen.">Lägg till</button>
                         <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#change-database-modal" title="Gör ändringar i databasen.">Ändra</button>
                         <button type="button" class="btn">Ta bort</button>
@@ -96,30 +108,40 @@
                     </div>
                 </div>
             </div>
+            <!-- Table container-->
+            <!-- ============ -->
             <div class="container-fluid table-container">
                 <table class="table"> 
                     <thead class="text-uppercase"> 
                         <tr class=""> 
-                            <th scope="col">First name</th> 
-                            <th scope="col">Last Name</th> 
-                            <th scope="col">Username</th> 
+                            <th scope="col">ID</th>
+                            <th scope="col">Artikelnamn</th> 
+                            <th scope="col">Artikelnummer</th> 
+                            <th scope="col">Produkttyp</th>
+                            <th scope="col">EAN</th> 
                         </tr>                         
                     </thead>                     
                     <tbody class=""> 
                         <tr> 
-                            <td>Mark</td> 
-                            <td>Otto</td> 
-                            <td>@mdo</td> 
-                        </tr>                         
+                            <td>1</td> 
+                            <td>Salladskyckling 200g</td> 
+                            <td>578961</td>
+                            <td>Färdiggrillat</td>
+                            <td>73881150312575</td> 
+                        </tr>
                         <tr> 
-                            <td>Jacob</td> 
-                            <td>Thornton</td> 
-                            <td>@fat</td> 
-                        </tr>                         
+                            <td>2</td> 
+                            <td>Kycklingschnitzel</td> 
+                            <td>578980</td>
+                            <td>Fryst</td>
+                            <td>73881150318493</td> 
+                        </tr>
                         <tr> 
-                            <td>Larry</td> 
-                            <td>the Bird</td> 
-                            <td>@twitter</td> 
+                            <td>3</td> 
+                            <td>Kycklingbröstfilé</td> 
+                            <td>578972</td>
+                            <td>Kycklingfilé</td>
+                            <td>73881150316434</td> 
                         </tr>                         
                     </tbody>                     
                 </table>
@@ -130,4 +152,5 @@
         <!-- Placed at the end of the document so the pages load faster -->
         <script src="assets/js/popper.min.js"></script>
         <script src="bootstrap/js/bootstrap.min.js"></script>
+        <script src="pgia/lib/pgia.js"></script>
     </body>
