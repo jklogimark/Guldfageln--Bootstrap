@@ -124,28 +124,25 @@ a:hover {
     }
 
     .header {
-        height: 25vh;
-        max-height: 25vh;
+        height: 30vh;
+        max-height: 30vh;
     }
 
     .button-container {
         height: 25vh;
         max-height: 25vh;
-        margin-top: 5rem;
-        margin-bottom: 5rem;
+        margin-top: 10rem;
+        margin-bottom: 10rem;
     }
 
     .table-container {
-        height: 40vh;
-        max-height: 40vh;
+        height: 25vh;
+        max-height: 25vh;
         overflow: auto;
-        padding: 0rem 2rem;
     }
 
     .btn {
-        font-size: 1.2rem;
         margin-top: 0.5rem;
         margin-bottom: 0.5rem;
-        padding: 1.2rem 0rem;
     }
 }

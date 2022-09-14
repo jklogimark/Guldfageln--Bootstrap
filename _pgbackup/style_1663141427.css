@@ -37,8 +37,8 @@ a:hover {
 
 /* **** TABLE DESIGN**** */
 .table-container {
-    height: 70vh;
-    max-height: 70vh;
+    height: 68vh;
+    max-height: 68vh;
     overflow: auto;
 }
 
@@ -118,34 +118,26 @@ a:hover {
 
 /* **** MEDIA QUERIES **** */
 @media only screen and (max-width: 991px) {
-    body {
-        overflow-y: auto;
-        overflow-x: hidden;
-    }
-
     .header {
-        height: 25vh;
-        max-height: 25vh;
+        height: 30vh;
+        max-height: 30vh;
     }
 
     .button-container {
         height: 25vh;
         max-height: 25vh;
-        margin-top: 5rem;
-        margin-bottom: 5rem;
+        margin-top: 10rem;
+        margin-bottom: 10rem;
     }
 
     .table-container {
-        height: 40vh;
-        max-height: 40vh;
+        height: 45vh;
+        max-height: 45vh;
         overflow: auto;
-        padding: 0rem 2rem;
     }
 
     .btn {
-        font-size: 1.2rem;
         margin-top: 0.5rem;
         margin-bottom: 0.5rem;
-        padding: 1.2rem 0rem;
     }
 }

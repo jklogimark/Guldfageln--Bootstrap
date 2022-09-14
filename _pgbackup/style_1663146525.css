@@ -136,10 +136,9 @@ a:hover {
     }
 
     .table-container {
-        height: 40vh;
-        max-height: 40vh;
+        height: 25vh;
+        max-height: 25vh;
         overflow: auto;
-        padding: 0rem 2rem;
     }
 
     .btn {
