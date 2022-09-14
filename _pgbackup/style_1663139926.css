@@ -46,7 +46,6 @@ a:hover {
 
 .table {
     color: #141e3c;
-    text-align: center;
 }
 
 .td:hover {
@@ -139,7 +138,7 @@ a:hover {
     }
 
     .btn {
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-}
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
 }
