@@ -94,7 +94,8 @@ a:hover {
     -webkit-box-shadow: none;
 }
 
-.btn-close:focus {
+.btn-close:active,
+.btn-close:focus {
     outline: none !important;
     outline-width: 0 !important;
     box-shadow: none;
@@ -119,26 +120,14 @@ a:hover {
 
 /* **** MEDIA QUERIES **** */
 @media only screen and (max-width: 991px) {
-    .header {
-        height: 30vh;
-        max-height: 30vh;
-    }
-
     .button-container {
         height: 25vh;
         max-height: 25vh;
-        margin-top: 10rem;
-        margin-bottom: 10rem;
     }
 
     .table-container {
-        height: 45vh;
-        max-height: 45vh;
+        height: 58vh;
+        max-height: 58vh;
         overflow: auto;
-    }
-
-    .btn {
-        margin-top: 0.5rem;
-        margin-bottom: 0.5rem;
     }
 }
