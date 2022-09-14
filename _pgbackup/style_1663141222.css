@@ -28,14 +28,16 @@ a:hover {
 
 .header {
     height: 15vh;
+    max-height: 15vh;
     background-color: #141e3c;
 }
 
 .button-container {
     height: 15vh;
+    max-height: 15vh;
 }
 
-/* **** TABLE DESIGN**** */
+* **** TABLE DESIGN **** */
 .table-container {
     height: 68vh;
     max-height: 68vh;
@@ -137,7 +139,7 @@ a:hover {
     }
 
     .btn {
-        margin-top: 0.5rem;
-        margin-bottom: 0.5rem;
-    }
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
 }
