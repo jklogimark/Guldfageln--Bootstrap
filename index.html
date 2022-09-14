@@ -18,7 +18,7 @@
         <div id="wrapper" title="main-container" class="container-fluid m-0 p-0">
             <!-- Add to database modal = Should be used as a separate component in Blazor -->
             <!-- =================== -->
-            <div class="fade modal" id="add-to-database-modal" tabindex="-1" role="dialog" aria-hidden="true" data-bs-backdrop="true" data-bs-focus="false" title="Add To Database Modal"> 
+            <div class="fade modal" id="add-to-database-modal" tabindex="-1" role="dialog" aria-hidden="true" data-bs-backdrop="static" title="Add To Database Modal"> 
                 <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg"> 
                     <div class="modal-content"> 
                         <div class="modal-header"> 
@@ -36,7 +36,7 @@
             </div>
             <!-- Change database modal = Should be used as a separate component in Blazor -->
             <!-- =================== -->
-            <div class="fade modal" id="change-database-modal" tabindex="-1" role="dialog" aria-hidden="true" data-bs-backdrop="true" data-bs-focus="false" title="Change Database Modal"> 
+            <div class="fade modal" id="change-database-modal" tabindex="-1" role="dialog" aria-hidden="true" data-bs-backdrop="static" title="Change Database Modal"> 
                 <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg"> 
                     <div class="modal-content"> 
                         <div class="modal-header"> 
@@ -54,7 +54,7 @@
             </div>
             <!-- Support modal = Should be used as a separate component in Blazor -->
             <!-- ============ -->
-            <div class="fade modal pg-show-modal" id="support-modal" tabindex="-1" role="dialog" aria-hidden="true" data-bs-backdrop="true" data-bs-focus="false" title="Support Modal"> 
+            <div class="fade modal" id="support-modal" tabindex="-1" role="dialog" aria-hidden="true" data-bs-backdrop="static" title="Support Modal"> 
                 <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg"> 
                     <div class="modal-content"> 
                         <div class="modal-header"> 
@@ -105,7 +105,7 @@
             <!-- ============== -->
             <div class="button-container container-fluid ">
                 <div class="align-items-center d-flex flex-row h-100 justify-content-center row vw-100">
-                    <div class="align-items-lg-center col-6 col-lg-12 col-md-4 col-sm-6 d-flex d-lg-flex flex-column flex-lg-row h-100 justify-content-center justify-content-lg-center"> 
+                    <div class="align-items-lg-center col-8 col-lg-12 col-sm-4 d-flex d-lg-flex flex-column flex-lg-row h-100 justify-content-center justify-content-lg-center"> 
                         <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#add-to-database-modal" title="Lägg till en ny artikel i databasen.">Lägg till</button>
                         <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#change-database-modal" title="Gör ändringar i databasen.">Ändra</button>
                         <button type="button" class="btn">Ta bort</button>
