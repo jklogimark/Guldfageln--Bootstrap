@@ -151,6 +151,12 @@ tr:hover {
     -webkit-box-shadow: none;
 }
 
+.bi-tools,
+.bi-x-square-fill,
+.bi-printer-fill {
+    cursor: pointer;
+}
+
 /* **** MODAL DESIGN **** */
 .modal-header {
     background-color: #141e3c;
