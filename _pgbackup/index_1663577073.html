@@ -14,8 +14,8 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:700,600,500&display=swap"/>
     </head>
     <body>
-        <!-- Add to database modal = Should be used as a separate component in Blazor -->
-        <!-- ============================================================= -->
+        <!-- Wrapper = Do not delete! It holds the whole design together -->
+        <!-- ================================================= -->
         <div class="fade modal" id="add-to-database-modal" tabindex="-1" role="dialog" aria-hidden="true" data-bs-backdrop="static" title="Add To Database Modal"> 
             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg"> 
                 <div class="modal-content"> 
@@ -65,8 +65,6 @@
                 </div>                 
             </div>             
         </div>
-        <!-- Change database modal = Should be used as a separate component in Blazor -->
-        <!-- ============================================================== -->
         <div class="fade modal" id="change-database-modal" tabindex="-1" role="dialog" aria-hidden="true" data-bs-backdrop="static" title="Change Database Modal"> 
             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg"> 
                 <div class="modal-content"> 
@@ -121,8 +119,6 @@
                 </div>                 
             </div>             
         </div>
-        <!-- Support modal = Should be used as a separate component in Blazor -->
-        <!-- ====================================================== -->
         <div class="fade modal" id="support-modal" tabindex="-1" role="dialog" aria-hidden="true" data-bs-backdrop="static" title="Support Modal"> 
             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg"> 
                 <div class="modal-content"> 
@@ -161,29 +157,33 @@
                 </div>                 
             </div>             
         </div>
-        <!-- Preview and Print Modal = Should be used as a separate component in Blazor -->
-        <!-- ============================================================== -->
-        <div class="fade modal" id="preview-print-modal" tabindex="-1" role="dialog" aria-hidden="true" data-bs-backdrop="static" title="Preview and Print Modal"> 
-            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl"> 
-                <div class="modal-content"> 
-                    <div class="modal-header"> 
-                        <h3 class="modal-title">Förhandsgranska och Utskrift</h3> 
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>                         
-                    </div>                     
-                    <div class="align-items-center d-flex justify-content-center modal-body"> 
-                        <div class="container preview-print-container">
-                            <img src="images/logo-devis.png" width="100%" height="100%"/>
-                        </div>
-                    </div>                     
-                    <div class="modal-footer"> 
-                        <button type="button" class="btn">Skriv ut</button>                         
+        <div id="wrapper" title="main-container" class="container-fluid m-0 p-0">
+            <!-- Add to database modal = Should be used as a separate component in Blazor -->
+            <!-- ============================================================= -->
+            <!-- Change database modal = Should be used as a separate component in Blazor -->
+            <!-- ============================================================== -->
+            <!-- Support modal = Should be used as a separate component in Blazor -->
+            <!-- ====================================================== -->
+            <!-- Preview and Print Modal = Should be used as a separate component in Blazor -->
+            <!-- ============================================================== -->
+            <div class="fade modal" id="preview-print-modal" tabindex="-1" role="dialog" aria-hidden="true" data-bs-backdrop="static" title="Preview and Print Modal"> 
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl"> 
+                    <div class="modal-content"> 
+                        <div class="modal-header"> 
+                            <h3 class="modal-title">Förhandsgranska och Utskrift</h3> 
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>                             
+                        </div>                         
+                        <div class="align-items-center d-flex justify-content-center modal-body"> 
+                            <div class="container preview-print-container">
+                                <img src="images/logo-devis.png" width="100%" height="100%"/>
+                            </div>
+                        </div>                         
+                        <div class="modal-footer"> 
+                            <button type="button" class="btn">Skriv ut</button>                             
+                        </div>                         
                     </div>                     
                 </div>                 
-            </div>             
-        </div>
-        <!-- Wrapper = Do not delete! It holds the whole design together -->
-        <!-- ================================================= -->
-        <div id="wrapper" title="main-container" class="container-fluid m-0 p-0">
+            </div>
             <!-- Header container-->
             <!-- ============== -->
             <div class="container-fluid header">
@@ -279,6 +279,9 @@
                 </table>
             </div>
         </div>
+        <!-- Bootstrap core JavaScript
+    ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
         <script src="assets/js/popper.min.js"></script>
         <script src="bootstrap/js/bootstrap.min.js"></script>
         <script src="pgia/lib/pgia.js"></script>

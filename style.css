@@ -76,10 +76,11 @@ a:hover {
 /* **** TABLE DESIGN**** */
 .table {
     color: #141e3c;
+    font-family: 'Poppins', sans-serif;
     text-align: center;
 }
 
-tr:hover {
+tbody tr:hover {
     background-color: #141e3c;
     color: #D2AA5A;
     font-weight: 700;
