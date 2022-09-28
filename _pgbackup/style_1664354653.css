@@ -50,6 +50,14 @@ a:hover {
     min-height: 100vh;
 }
 
+#login-wrapper {
+    width: 100vw;
+    min-width: 100vw;
+    height: 100vh;
+    min-height: 100vh;
+    background-color: #141e3c;
+}
+
 .header {
     height: 15vh;
     background-color: #141e3c;
@@ -65,14 +73,38 @@ a:hover {
     overflow: auto;
 }
 
-/* **** TABLE DESIGN**** */
+.preview-print-container {
+    width: 1024px;
+    height: auto;
+    margin-left: 0;
+    margin-right: 0;
+    overflow: auto;
+}
+
+/* **** LOGIN FORM DESIGN **** */
+#login-form {
+    border-radius: 10px;
+    padding: 1rem 2rem;
+    background: linear-gradient(90deg, #ECE9E6, #FFFFFF);
+}
+
+#InputEmail {
+}
+
+#InputPassword {
+}
+
+/* **** TABLE DESIGN **** */
 .table {
     color: #141e3c;
+    font-family: 'Poppins', sans-serif;
     text-align: center;
 }
 
-.td:hover {
-    background-color: black;
+tbody tr:hover {
+    background-color: #141e3c;
+    color: #D2AA5A;
+    font-weight: 700;
 }
 
 /* **** BOOTSTRAP CLASSES **** */
@@ -141,6 +173,12 @@ a:hover {
     -webkit-box-shadow: none;
 }
 
+.bi-tools,
+.bi-x-square-fill,
+.bi-printer-fill {
+    cursor: pointer;
+}
+
 /* **** MODAL DESIGN **** */
 .modal-header {
     background-color: #141e3c;
@@ -150,11 +188,6 @@ a:hover {
 .modal-header h3 {
     font-weight: 600;
     text-transform: uppercase;
-}
-
-.modal-body h2 {
-    text-decoration: underline;
-    margin: 1rem 0rem 3rem 0rem;
 }
 
 .btn-close {
@@ -174,15 +207,13 @@ a:hover {
     }
 
     .button-container {
-        height: 25vh;
-        max-height: 25vh;
-        margin-top: 5rem;
-        margin-bottom: 5rem;
+        height: 15vh;
+        max-height: 15vh;
     }
 
     .table-container {
-        height: 40vh;
-        max-height: 40vh;
+        height: 60vh;
+        max-height: 60vh;
         overflow: auto;
         padding: 0rem 2rem;
     }
@@ -196,5 +227,18 @@ a:hover {
         margin-top: 0.5rem;
         margin-bottom: 0.5rem;
         padding: 1.2rem 5rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .bi-tools,
+    .bi-x-square-fill {
+        width: 1.4rem;
+        height: 1.4rem;
+    }
+
+    .bi-printer-fill {
+        width: 1.5rem;
+        height: 1.5rem;
     }
 }
