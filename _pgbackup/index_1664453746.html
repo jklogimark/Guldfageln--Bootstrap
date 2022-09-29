@@ -14,8 +14,6 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:700,600,500&display=swap"/>
     </head>
     <body>
-        <!-- Wrapper = Do not delete! It holds the whole design together -->
-        <!-- ================================================= -->
         <!-- Add to database modal = Should be used as a separate component in Blazor -->
         <!-- ============================================================= -->
         <div class="fade modal" id="add-to-database-modal" tabindex="-1" role="dialog" aria-hidden="true" data-bs-backdrop="static" title="Add To Database Modal"> 
@@ -183,9 +181,10 @@
                 </div>                 
             </div>             
         </div>
-        <!-- Wrapper container-->         
-
-        <!-- =============== -->
+        <!-- Login Modal = Should be used as a separate component in Blazor -->
+        <!-- ==================================================== -->
+        <!-- Wrapper = Do not delete! It holds the whole design together -->
+        <!-- ================================================= -->
         <div id="wrapper" title="main-container" class="container-fluid m-0 p-0">
             <!-- Header container-->
             <!-- ============== -->
@@ -202,7 +201,7 @@
                 <div class="align-items-center d-flex flex-row h-100 justify-content-center row vw-100">
                     <div class="align-items-lg-center col-8 col-lg-12 col-sm-4 d-flex d-lg-flex flex-column flex-lg-row h-auto justify-content-center justify-content-lg-center"> 
                         <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#add-to-database-modal" title="Lägg till en ny artikel i databasen.">Lägg till</button>
-                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#support-modal" title="Kontakta oss på Logimark">Support</button>
+                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#support-modal" title="Kontakta oss på Logimark">Support</button><a href="login.html"><button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#login-modal">Logga in</button></a>
                     </div>
                 </div>
             </div>
