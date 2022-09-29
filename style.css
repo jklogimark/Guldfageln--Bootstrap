@@ -78,6 +78,12 @@ a:hover {
 }
 
 /* **** LOGIN FORM DESIGN **** */
+#login-wrapper {
+    width: 100vw;
+    height: 100vh;
+    background-color: #141E30;
+}
+
 #login-form {
     border-radius: 10px;
     padding: 5rem 2rem;

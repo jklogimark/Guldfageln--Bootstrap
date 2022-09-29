@@ -30,7 +30,7 @@ h2 {
 }
 
 h3 {
-    font-size: 2rem;
+    font-size: 2;
 }
 
 a {
@@ -50,6 +50,10 @@ a:hover {
     min-height: 100vh;
 }
 
+#login-wrapper {
+    background-color: #141e3c;
+}
+
 .header {
     height: 15vh;
     background-color: #141e3c;
@@ -65,14 +69,67 @@ a:hover {
     overflow: auto;
 }
 
-/* **** TABLE DESIGN**** */
+.preview-print-container {
+    width: 1024px;
+    height: auto;
+    margin-left: 0;
+    margin-right: 0;
+    overflow: auto;
+}
+
+/* **** LOGIN FORM DESIGN **** */
+#login-wrapper {
+    width: 100vw;
+    height: 100vh;
+    background-color: #141E30;
+}
+
+#login-form {
+    border-radius: 10px;
+    padding: 5rem 2rem;
+    background: linear-gradient(90deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+}
+
+#login-form h2 {
+    margin-bottom: 2rem;
+}
+
+#InputEmail,
+#InputPassword {
+    border: none;
+    font-size: inherit;
+    color: #D2AA5A;
+    padding: 0.7rem 0.5rem;
+    background: linear-gradient(90deg, #141E30, #243B55);
+}
+
+.bi-x-lg {
+    width: 3em;
+    height: 3em;
+    color: #D2AA5A;
+    border: 3px solid #D2AA5A;
+    border-radius: 50%;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.bi-x-lg:hover {
+    color: #FBF5B7;
+    border: 3px solid #FBF5B7;
+    transition: all 0.3s ease-in-out;
+}
+
+/* **** TABLE DESIGN **** */
 .table {
     color: #141e3c;
+    font-family: 'Poppins', sans-serif;
     text-align: center;
 }
 
-.td:hover {
-    background-color: black;
+tbody tr:hover {
+    background-color: #141e3c;
+    color: #D2AA5A;
+    font-weight: 700;
 }
 
 /* **** BOOTSTRAP CLASSES **** */
@@ -141,6 +198,12 @@ a:hover {
     -webkit-box-shadow: none;
 }
 
+.bi-tools,
+.bi-x-square-fill,
+.bi-printer-fill {
+    cursor: pointer;
+}
+
 /* **** MODAL DESIGN **** */
 .modal-header {
     background-color: #141e3c;
@@ -171,13 +234,11 @@ a:hover {
     .button-container {
         height: 25vh;
         max-height: 25vh;
-        margin-top: 5rem;
-        margin-bottom: 5rem;
     }
 
     .table-container {
-        height: 40vh;
-        max-height: 40vh;
+        height: 50vh;
+        max-height: 50vh;
         overflow: auto;
         padding: 0rem 2rem;
     }
@@ -191,5 +252,19 @@ a:hover {
         margin-top: 0.5rem;
         margin-bottom: 0.5rem;
         padding: 1.2rem 5rem;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .bi-tools,
+    .bi-x-square-fill {
+        width: 1.4rem;
+        height: 1.4rem;
+    }
+
+    .bi-printer-fill {
+        width: 1.5rem;
+        height: 1.5rem;
     }
 }
