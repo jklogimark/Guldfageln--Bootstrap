@@ -123,6 +123,12 @@ a:hover {
     transition: all 0.3s ease-in-out;
 }
 
+/* **** ADMINISTRATIONS PAGE DESIGN **** */
+#admin-page-wrapper {
+    width: 100vw;
+    height: 100vh;
+}
+
 /* **** TABLE DESIGN **** */
 .table {
     color: #141e3c;
