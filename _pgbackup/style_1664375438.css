@@ -97,22 +97,6 @@ a:hover {
     background: linear-gradient(90deg, #141E30, #243B55);
 }
 
-.bi-x-lg {
-    width: 3em;
-    height: 3em;
-    color: #D2AA5A;
-    border: 3px solid #D2AA5A;
-    border-radius: 50%;
-    padding: 1rem;
-    cursor: pointer;
-}
-
-.bi-x-lg:hover {
-    color: #FBF5B7;
-    border: 3px solid #FBF5B7;
-    transition: all 0.3s ease-in-out;
-}
-
 /* **** TABLE DESIGN **** */
 .table {
     color: #141e3c;
