@@ -11,28 +11,6 @@ body {
     overflow-x: hidden;
 }
 
-h1,
-h2,
-h3 {
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.4;
-    font-weight: 600;
-    letter-spacing: 1px;
-    text-align: center;
-}
-
-h1 {
-    font-size: 2.8rem;
-}
-
-h2 {
-    font-size: 2.4rem;
-}
-
-h3 {
-    font-size: 2;
-}
-
 a {
     color: #141e3c;
 }
@@ -42,7 +20,6 @@ a:hover {
     transition: all 0.3s ease-in-out;
 }
 
-/* **** Main Wrappers & Containers **** */
 #wrapper {
     width: 100vw;
     min-width: 100vw;
@@ -59,31 +36,20 @@ a:hover {
     height: 15vh;
 }
 
+/* **** TABLE DESIGN**** */
 .table-container {
     height: 70vh;
     max-height: 70vh;
     overflow: auto;
 }
 
-.preview-print-container {
-    width: 1024px;
-    height: auto;
-    margin-left: 0;
-    margin-right: 0;
-    overflow: auto;
-}
-
-/* **** TABLE DESIGN**** */
 .table {
     color: #141e3c;
-    font-family: 'Poppins', sans-serif;
     text-align: center;
 }
 
-tbody tr:hover {
-    background-color: #141e3c;
-    color: #D2AA5A;
-    font-weight: 700;
+.td:hover {
+    background-color: black;
 }
 
 /* **** BOOTSTRAP CLASSES **** */
@@ -142,8 +108,6 @@ tbody tr:hover {
 }
 
 .form-control:focus {
-    background-color: #141e3c;
-    color: #D2AA5A;
     border: 1px solid #141e3c;
     outline: none !important;
     outline-width: 0 !important;
@@ -152,10 +116,10 @@ tbody tr:hover {
     -webkit-box-shadow: none;
 }
 
-.bi-tools,
-.bi-x-square-fill,
-.bi-printer-fill {
-    cursor: pointer;
+.form-control-labels {
+    font-size: 1.8rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
 }
 
 /* **** MODAL DESIGN **** */
@@ -186,13 +150,15 @@ tbody tr:hover {
     }
 
     .button-container {
-        height: 15vh;
-        max-height: 15vh;
+        height: 25vh;
+        max-height: 25vh;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
     }
 
     .table-container {
-        height: 60vh;
-        max-height: 60vh;
+        height: 40vh;
+        max-height: 40vh;
         overflow: auto;
         padding: 0rem 2rem;
     }
@@ -206,18 +172,5 @@ tbody tr:hover {
         margin-top: 0.5rem;
         margin-bottom: 0.5rem;
         padding: 1.2rem 5rem;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .bi-tools,
-    .bi-x-square-fill {
-        width: 1.4rem;
-        height: 1.4rem;
-    }
-
-    .bi-printer-fill {
-        width: 1.5rem;
-        height: 1.5rem;
     }
 }
