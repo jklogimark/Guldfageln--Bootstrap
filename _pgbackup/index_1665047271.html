@@ -163,28 +163,15 @@
         </div>
         <!-- Preview and Print Modal = Should be used as a separate component in Blazor -->
         <!-- ============================================================== -->
-        <div class="fade modal pg-show-modal" id="preview-print-modal" tabindex="-1" role="dialog" aria-hidden="true" data-bs-backdrop="static" title="Preview and Print Modal"> 
+        <div class="fade modal" id="preview-print-modal" tabindex="-1" role="dialog" aria-hidden="true" data-bs-backdrop="static" title="Preview and Print Modal"> 
             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl"> 
                 <div class="modal-content"> 
                     <div class="modal-header"> 
                         <h3 class="modal-title">Förhandsgranska och Utskrift</h3> 
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>                         
                     </div>                     
-                    <div class="modal-body">
-                        <div class="align-items-center d-flex h-100 justify-content-center row">
-                            <div class="col-12 col-sm-10 col-xxl-12 pe-0 ps-0">
-                                <div class="mb-3"> 
-                                    <label for="select-form-input">Välj skrivare</label>                                     
-                                    <select id="select-form-input" class="form-select form-select-lg" multiple="multiple" size="10"> 
-                                        <option selected>Open this select menu</option>                                         
-                                        <option value="1">One</option>                                         
-                                        <option value="2">Two</option>                                         
-                                        <option value="3">Three</option>                                         
-                                    </select>                                     
-                                </div>
-                            </div>
-                        </div>
-                        <div class="align-items-center container-fluid d-flex justify-content-center overflow-hidden">
+                    <div class="align-items-center d-flex justify-content-center modal-body"> 
+                        <div class="container preview-print-container">
                             <img src="images/logo-devis.png" width="100%" height="100%"/>
                         </div>
                     </div>                     
@@ -212,7 +199,8 @@
             <!-- ============== -->
             <div class="button-container container-fluid ">
                 <div class="align-items-center d-flex flex-row h-100 justify-content-center row vw-100">
-                    <div class="align-items-lg-center col-8 col-lg-12 col-sm-4 d-flex d-lg-flex flex-column flex-lg-row h-auto justify-content-center justify-content-lg-center"> <a href="/adminprinters"><button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#add-to-database-modal" title="Lägg till en ny artikel i databasen.">Admin</button></a>
+                    <div class="align-items-lg-center col-8 col-lg-12 col-sm-4 d-flex d-lg-flex flex-column flex-lg-row h-auto justify-content-center justify-content-lg-center"> <a href="/adminprinters"></a><a href="/adminprinters"><button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#add-to-database-modal" title="Lägg till en ny artikel i databasen.">Admin</button></a>
+                        <a href="/adminprinters"><button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#add-to-database-modal" title="Lägg till en ny artikel i databasen.">Admin</button></a>
                         <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#add-to-database-modal" title="Lägg till en ny artikel i databasen.">Lägg till</button>
                         <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#support-modal" title="Kontakta oss på Logimark">Support</button><a href="login.html"><button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#login-modal">Logga in</button></a>
                     </div>
