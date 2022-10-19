@@ -122,20 +122,11 @@ a:hover {
 /* **** ADMINISTRATIONS PAGE DESIGN **** */
 #admin-page-wrapper {
     background: linear-gradient(90deg, #141E30, #243B55);
-}
-
-#admin-wrapper-top {
+    height: 100vh;
 }
 
 .card {
     border: none;
-}
-
-.card-header,
-.card-body,
-.card-footer,
-.form-select {
-    background: linear-gradient(90deg, #ECE9E6, #FFFFFF);
 }
 
 .card-header {
@@ -264,13 +255,13 @@ tbody tr td {
 .form-control {
     font-size: 1.6rem;
     color: #141e3c;
-    border: 2px solid #141e3c;
+    border: 1px solid #141e3c;
 }
 
 .form-control:focus {
     background: linear-gradient(90deg, #141E30, #243B55);
     color: #D2AA5A;
-    border: 2px solid #D2AA5A;
+    border: 1px solid #D2AA5A;
     outline: none !important;
     outline-width: 0 !important;
     box-shadow: none;
@@ -353,5 +344,11 @@ tbody tr td {
     .bi-gear-fill {
         width: 1.5rem;
         height: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    #admin-page-wrapper {
+        height: 100%;
     }
 }
