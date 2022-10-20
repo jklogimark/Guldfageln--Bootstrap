@@ -16,7 +16,7 @@
     <body>
         <!-- Add to database modal = Should be used as a separate component in Blazor -->
         <!-- ============================================================= -->
-        <div class="fade modal" id="add-to-database-modal" tabindex="-1" role="dialog" aria-hidden="true" data-bs-backdrop="static" title="Add To Database Modal"> 
+        <div class="fade modal" id="add-to-database-modal" tabindex="-1" role="dialog" aria-hidden="true" data-bs-backdrop="static"> 
             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg"> 
                 <div class="modal-content"> 
                     <div class="modal-header"> 
@@ -67,7 +67,7 @@
         </div>
         <!-- Change database modal = Should be used as a separate component in Blazor -->
         <!-- ============================================================== -->
-        <div class="fade modal" id="change-database-modal" tabindex="-1" role="dialog" aria-hidden="true" data-bs-backdrop="static" title="Change Database Modal"> 
+        <div class="fade modal" id="change-database-modal" tabindex="-1" role="dialog" aria-hidden="true" data-bs-backdrop="static"> 
             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg"> 
                 <div class="modal-content"> 
                     <div class="modal-header"> 
@@ -123,7 +123,7 @@
         </div>
         <!-- Support modal = Should be used as a separate component in Blazor -->
         <!-- ====================================================== -->
-        <div class="fade modal" id="support-modal" tabindex="-1" role="dialog" aria-hidden="true" data-bs-backdrop="static" title="Support Modal"> 
+        <div class="fade modal" id="support-modal" tabindex="-1" role="dialog" aria-hidden="true" data-bs-backdrop="static"> 
             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg"> 
                 <div class="modal-content"> 
                     <div class="modal-header"> 
@@ -163,7 +163,7 @@
         </div>
         <!-- Preview and Print Modal = Should be used as a separate component in Blazor -->
         <!-- ============================================================== -->
-        <div class="fade modal pg-show-modal" id="preview-print-modal" tabindex="-1" role="dialog" aria-hidden="true" data-bs-backdrop="static" title="Preview and Print Modal"> 
+        <div class="fade modal" id="preview-print-modal" tabindex="-1" role="dialog" aria-hidden="true" data-bs-backdrop="static">
             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl"> 
                 <div class="modal-content"> 
                     <div class="modal-header"> 
@@ -171,31 +171,228 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>                         
                     </div>                     
                     <div class="modal-body">
-                        <div class="align-items-center d-flex h-100 justify-content-center row">
-                            <div class="col-12 col-sm-10 col-xxl-12 pe-0 ps-0">
-                                <div class="mb-3"> 
-                                    <label for="select-form-input">Välj skrivare</label>                                     
-                                    <select id="select-form-input" class="form-select form-select-lg" multiple="multiple" size="10"> 
-                                        <option selected>Open this select menu</option>                                         
-                                        <option value="1">One</option>                                         
-                                        <option value="2">Two</option>                                         
-                                        <option value="3">Three</option>                                         
-                                    </select>                                     
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="align-items-center col-8 d-flex">
+                                    <img src="images/logo-devis.png" width="100%" height="100%"/> 
+                                </div>
+                                <div class="col-4 overflow-auto" style="height: 30vh;">
+                                    <div class="mb-3"> 
+                                        <label for="article_name" id="article_name" class="pb-lg-1">Datakälla</label>                                         
+                                        <input type="text" class="form-control form-control-lg" id="article_name_input"/> 
+                                    </div>                                     
                                 </div>
                             </div>
                         </div>
-                        <div class="align-items-center container-fluid d-flex justify-content-center overflow-hidden">
-                            <img src="images/logo-devis.png" width="100%" height="100%"/>
-                        </div>
                     </div>                     
-                    <div class="modal-footer"> 
-                        <button type="button" class="btn">Skriv ut</button>                         
+                    <div class="modal-footer">
+                        <div class="container-fluid">
+                            <div class="d-flex flex-row row">
+                                <div class="align-items-center col-md-4 d-flex flex-row justify-content-center">
+                                    <button type="button" class="btn">Tillbaka</button>                                     
+                                </div>
+                                <div class="align-items-center col-lg-4 d-flex flex-row justify-content-center">
+                                    <div class="mb-3"> 
+                                        <label for="article_name" id="article_name" class="pb-lg-1">Antal Kopior</label>                                         
+                                        <input type="number" class="form-control form-control-lg" id="article_name_input"/> 
+                                    </div>                                     
+                                </div>
+                                <div class="align-items-center col-md-4 d-flex flex-row justify-content-center">
+                                    <button type="button" class="btn">Skriv ut</button>                                     
+                                </div>
+                            </div>
+                        </div>                         
                     </div>                     
                 </div>                 
             </div>             
         </div>
-        <!-- Login Modal = Should be used as a separate component in Blazor -->
-        <!-- ==================================================== -->
+        <!-- File explorer modal = Should be used as a separate component in Blazor -->
+        <!-- ========================================================== -->
+        <div class="fade modal" id="file-explorer-modal" tabindex="-1" role="dialog" aria-hidden="true" data-bs-backdrop="static"> 
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl"> 
+                <div class="modal-content"> 
+                    <div class="modal-header"> 
+                        <h3 class="modal-title">Utforskaren</h3> 
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>                         
+                    </div>                     
+                    <div class="pb-4 pe-5 ps-5 pt-4"> 
+                        <div class="mb-4 mt-3 row">
+                            <div class="col-xxl-7">
+                                <input type="text" class="form-control" placeholder="Den här datorn > Windows (C:) > Labels > Guldfågeln" aria-label="Username" aria-describedby="basic-addon1" readonly="readonly" id="filepath"/>
+                            </div>
+                            <div class="align-items-center col-xxl-5 d-flex flex-row">
+                                <input type="search" class="form-control" placeholder="Sök i Guldfågeln" aria-label="Username" aria-describedby="basic-addon1" id="search-files-box"/>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="1.2em" class="bi bi-search" viewBox="0 0 16 16" fill="currentColor" id="search-icon">
+                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                </svg>                                 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-body"> 
+                        <div class="row">
+                            <div style="height: 50vh;">
+                                <table class="table"> 
+                                    <thead> 
+                                        <tr> 
+                                            <th scope="col">Namn</th> 
+                                            <th scope="col">Senast ändrad</th> 
+                                            <th scope="col">Typ</th> 
+                                            <th scope="col">Storlek</th> 
+                                        </tr>                                         
+                                    </thead>
+                                    <tbody> 
+                                        <tr> 
+                                            <td>Lantmännen</td>
+                                            <td>2022-09-09 14:54</td> 
+                                            <td>BarTender Dokument</td> 
+                                            <td>29 kB</td> 
+                                        </tr>
+                                        <tr> 
+                                            <td>Lantmännen 2</td>
+                                            <td>2022-09-14 09:02</td> 
+                                            <td>BarTender Dokument</td> 
+                                            <td>22 kB</td> 
+                                        </tr>
+                                        <tr> 
+                                            <td>Lantmännen 3</td>
+                                            <td>2022-10-22 11:32</td> 
+                                            <td>BarTender Dokument</td> 
+                                            <td>42 kB</td> 
+                                        </tr>
+                                        <tr> 
+                                            <td>Lantmännen 3</td>
+                                            <td>2022-10-22 11:32</td> 
+                                            <td>BarTender Dokument</td> 
+                                            <td>42 kB</td> 
+                                        </tr>
+                                        <tr> 
+                                            <td>Lantmännen 3</td>
+                                            <td>2022-10-22 11:32</td> 
+                                            <td>BarTender Dokument</td> 
+                                            <td>42 kB</td> 
+                                        </tr>
+                                        <tr> 
+                                            <td>Lantmännen 3</td>
+                                            <td>2022-10-22 11:32</td> 
+                                            <td>BarTender Dokument</td> 
+                                            <td>42 kB</td> 
+                                        </tr>
+                                        <tr> 
+                                            <td>Lantmännen 3</td>
+                                            <td>2022-10-22 11:32</td> 
+                                            <td>BarTender Dokument</td> 
+                                            <td>42 kB</td> 
+                                        </tr>
+                                        <tr> 
+                                            <td>Lantmännen 3</td>
+                                            <td>2022-10-22 11:32</td> 
+                                            <td>BarTender Dokument</td> 
+                                            <td>42 kB</td> 
+                                        </tr>
+                                        <tr> 
+                                            <td>Lantmännen 3</td>
+                                            <td>2022-10-22 11:32</td> 
+                                            <td>BarTender Dokument</td> 
+                                            <td>42 kB</td> 
+                                        </tr>
+                                        <tr> 
+                                            <td>Lantmännen 3</td>
+                                            <td>2022-10-22 11:32</td> 
+                                            <td>BarTender Dokument</td> 
+                                            <td>42 kB</td> 
+                                        </tr>
+                                        <tr> 
+                                            <td>Lantmännen 3</td>
+                                            <td>2022-10-22 11:32</td> 
+                                            <td>BarTender Dokument</td> 
+                                            <td>42 kB</td> 
+                                        </tr>
+                                        <tr> 
+                                            <td>Lantmännen 3</td>
+                                            <td>2022-10-22 11:32</td> 
+                                            <td>BarTender Dokument</td> 
+                                            <td>42 kB</td> 
+                                        </tr>
+                                        <tr> 
+                                            <td>Lantmännen 3</td>
+                                            <td>2022-10-22 11:32</td> 
+                                            <td>BarTender Dokument</td> 
+                                            <td>42 kB</td> 
+                                        </tr>
+                                        <tr> 
+                                            <td>Lantmännen 3</td>
+                                            <td>2022-10-22 11:32</td> 
+                                            <td>BarTender Dokument</td> 
+                                            <td>42 kB</td> 
+                                        </tr>
+                                        <tr> 
+                                            <td>Lantmännen 3</td>
+                                            <td>2022-10-22 11:32</td> 
+                                            <td>BarTender Dokument</td> 
+                                            <td>42 kB</td> 
+                                        </tr>
+                                        <tr> 
+                                            <td>Lantmännen 3</td>
+                                            <td>2022-10-22 11:32</td> 
+                                            <td>BarTender Dokument</td> 
+                                            <td>42 kB</td> 
+                                        </tr>
+                                        <tr> 
+                                            <td>Lantmännen 3</td>
+                                            <td>2022-10-22 11:32</td> 
+                                            <td>BarTender Dokument</td> 
+                                            <td>42 kB</td> 
+                                        </tr>
+                                        <tr> 
+                                            <td>Lantmännen 3</td>
+                                            <td>2022-10-22 11:32</td> 
+                                            <td>BarTender Dokument</td> 
+                                            <td>42 kB</td> 
+                                        </tr>
+                                        <tr> 
+                                            <td>Lantmännen 3</td>
+                                            <td>2022-10-22 11:32</td> 
+                                            <td>BarTender Dokument</td> 
+                                            <td>42 kB</td> 
+                                        </tr>
+                                        <tr> 
+                                            <td>Lantmännen 3</td>
+                                            <td>2022-10-22 11:32</td> 
+                                            <td>BarTender Dokument</td> 
+                                            <td>42 kB</td> 
+                                        </tr>
+                                        <tr> 
+                                            <td>Lantmännen 3</td>
+                                            <td>2022-10-22 11:32</td> 
+                                            <td>BarTender Dokument</td> 
+                                            <td>42 kB</td> 
+                                        </tr>
+                                        <tr> 
+                                            <td>Lantmännen 3</td>
+                                            <td>2022-10-22 11:32</td> 
+                                            <td>BarTender Dokument</td> 
+                                            <td>42 kB</td> 
+                                        </tr>
+                                        <tr> 
+                                            <td>Lantmännen 3</td>
+                                            <td>2022-10-22 11:32</td> 
+                                            <td>BarTender Dokument</td> 
+                                            <td>42 kB</td> 
+                                        </tr>
+                                        <tr> 
+                                            <td>Lantmännen 3</td>
+                                            <td>2022-10-22 11:32</td> 
+                                            <td>BarTender Dokument</td> 
+                                            <td>42 kB</td> 
+                                        </tr>                                         
+                                    </tbody>                                     
+                                </table>
+                            </div>
+                        </div>
+                    </div>                     
+                </div>                 
+            </div>             
+        </div>
         <!-- Wrapper = Do not delete! It holds the whole design together -->
         <!-- ================================================= -->
         <div id="wrapper" title="main-container" class="container-fluid m-0 p-0">
@@ -211,10 +408,13 @@
             <!-- Button container-->
             <!-- ============== -->
             <div class="button-container container-fluid ">
-                <div class="align-items-center d-flex flex-row h-100 justify-content-center row vw-100">
+                <div class="align-items-center align-items-lg-center d-flex d-lg-flex flex-column flex-lg-row h-100 justify-content-center justify-content-lg-center row vw-100">
                     <div class="align-items-lg-center col-8 col-lg-12 col-sm-4 d-flex d-lg-flex flex-column flex-lg-row h-auto justify-content-center justify-content-lg-center"> <a href="/adminprinters"><button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#add-to-database-modal" title="Lägg till en ny artikel i databasen.">Admin</button></a>
                         <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#add-to-database-modal" title="Lägg till en ny artikel i databasen.">Lägg till</button>
                         <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#support-modal" title="Kontakta oss på Logimark">Support</button><a href="login.html"><button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#login-modal">Logga in</button></a>
+                    </div>
+                    <div class="align-items-lg-center col-12 col-lg-4 col-sm-6 col-xl-3 col-xxl-2 d-flex d-lg-flex flex-column flex-lg-row h-auto justify-content-center justify-content-lg-center"> 
+                        <input type="search" class="form-control form-control-lg" placeholder="Sök efter artikel" aria-label="Username" aria-describedby="basic-addon1"/>
                     </div>
                 </div>
             </div>
