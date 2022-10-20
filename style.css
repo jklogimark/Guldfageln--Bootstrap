@@ -255,13 +255,13 @@ tbody tr td {
 .form-control {
     font-size: 1.6rem;
     color: #141e3c;
-    border: 1px solid #141e3c;
+    border: 2px solid #141e3c;
 }
 
 .form-control:focus {
     background: linear-gradient(90deg, #141E30, #243B55);
     color: #D2AA5A;
-    border: 1px solid #D2AA5A;
+    border: 2px solid #D2AA5A;
     outline: none !important;
     outline-width: 0 !important;
     box-shadow: none;
@@ -289,6 +289,61 @@ tbody tr td {
 
 .btn-close {
     background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23D2AA5A'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e") center/1em auto no-repeat;
+}
+
+/* File Explorer Modal = Special Modal */
+#file-explorer-modal .modal-body {
+    background-color: #fff;
+}
+
+#filepath {
+    font-size: 1.4rem;
+    background-color: #fff;
+    border: 2px solid #141e3c;
+}
+
+#filepath::placeholder {
+    color: #6d6d6d;
+}
+
+#search-files-box {
+    font-size: 1.4rem;
+    background-color: #fff;
+    border: 2px solid #141e3c;
+    margin-right: 0.5rem;
+}
+
+#search-files-box::placeholder {
+    color: #6d6d6d;
+}
+
+#search-icon {
+    color: #141e3c;
+}
+
+#search-icon:hover,
+#search-icon:active,
+#search-icon:focus {
+    color: #D2AA5A;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+#file-explorer-modal .table thead tr th,
+#file-explorer-modal .table tbody tr td {
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-align: left;
+    border: none;
+}
+
+#file-explorer-modal .table thead tr th {
+    font-weight: 600;
+}
+
+#file-explorer-modal .table tbody tr:hover {
+    background-color: #141e3c;
+    color: #D2AA5A;
 }
 
 /* **** MEDIA QUERIES **** */

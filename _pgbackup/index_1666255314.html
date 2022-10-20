@@ -163,26 +163,89 @@
         </div>
         <!-- Preview and Print Modal = Should be used as a separate component in Blazor -->
         <!-- ============================================================== -->
-        <div class="fade modal" id="preview-print-modal" tabindex="-1" role="dialog" aria-hidden="true" data-bs-backdrop="static" title="Preview and Print Modal"> 
+        <div class="fade modal" id="preview-print-modal" tabindex="-1" role="dialog" aria-hidden="true" data-bs-backdrop="static" title="Preview and Print Modal">
             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl"> 
                 <div class="modal-content"> 
                     <div class="modal-header"> 
                         <h3 class="modal-title">Förhandsgranska och Utskrift</h3> 
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>                         
                     </div>                     
-                    <div class="align-items-center d-flex justify-content-center modal-body"> 
-                        <div class="container preview-print-container">
-                            <img src="images/logo-devis.png" width="100%" height="100%"/>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="align-items-center col-8 d-flex">
+                                    <img src="images/logo-devis.png" width="100%" height="100%"/> 
+                                </div>
+                                <div class="col-4 overflow-auto" style="height: 30vh;">
+                                    <div class="mb-3"> 
+                                        <label for="article_name" id="article_name" class="pb-lg-1">Datakälla</label>                                         
+                                        <input type="text" class="form-control form-control-lg" id="article_name_input"/> 
+                                    </div>                                     
+                                </div>
+                            </div>
                         </div>
                     </div>                     
-                    <div class="modal-footer"> 
-                        <button type="button" class="btn">Skriv ut</button>                         
+                    <div class="modal-footer">
+                        <div class="container-fluid">
+                            <div class="d-flex flex-row row">
+                                <div class="align-items-center col-md-4 d-flex flex-row justify-content-center">
+                                    <button type="button" class="btn">Tillbaka</button>                                     
+                                </div>
+                                <div class="align-items-center col-lg-4 d-flex flex-row justify-content-center">
+                                    <div class="mb-3"> 
+                                        <label for="article_name" id="article_name" class="pb-lg-1">Antal Kopior</label>                                         
+                                        <input type="number" class="form-control form-control-lg" id="article_name_input"/> 
+                                    </div>                                     
+                                </div>
+                                <div class="align-items-center col-md-4 d-flex flex-row justify-content-center">
+                                    <button type="button" class="btn">Skriv ut</button>                                     
+                                </div>
+                            </div>
+                        </div>                         
                     </div>                     
                 </div>                 
             </div>             
         </div>
-        <!-- Login Modal = Should be used as a separate component in Blazor -->
-        <!-- ==================================================== -->
+        <!-- File explorer modal = Should be used as a separate component in Blazor -->
+        <!-- ========================================================== -->
+        <div class="fade modal" id="file-explorer-modal" tabindex="-1" role="dialog" aria-hidden="true" data-bs-backdrop="static" title="File Explorer Modal"> 
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg"> 
+                <div class="modal-content"> 
+                    <div class="modal-header"> 
+                        <h3 class="modal-title">Kontakta oss</h3> 
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>                         
+                    </div>                     
+                    <div class="modal-body pb-5 pt-5"> 
+                        <div class="align-items-center d-flex d-lg-flex flex-lg-row flex-row justify-content-center justify-content-lg-center row">
+                            <div class="align-items-center col-12 col-lg-6 d-flex justify-content-center">
+                                <img src="images/Logimark_logoCMYK-2.png" width="70%" class="d-lg-flex d-none"/> 
+                            </div>
+                            <div class="align-items-center col-12 col-lg-6 d-flex flex-column justify-content-center">
+                                <div class="align-items-center align-items-lg-start col-12 d-flex d-lg-flex flex-column flex-lg-column mb-2 mt-2">
+                                    <h2 class="mb-3">Reception</h2>
+                                    <p class="mb-2">Mail: <a href="mailto:info@logimark.se">info@logimark.se</a></p>
+                                    <p class="mb-2">Tel: +46 10 444 16 00</p> 
+                                </div>
+                                <div class="align-items-center align-items-lg-start col-12 d-flex d-lg-flex flex-column flex-lg-column mb-2 mt-2">
+                                    <h2 class="mb-3">Support</h2>
+                                    <p class="mb-2">Mail: <a href="mailto:support@logimark.se">support@logimark.se</a></p> 
+                                </div>                                 
+                            </div>
+                        </div>
+                    </div>                     
+                    <div class="d-flex flex-row modal-footer"> 
+                        <div class="row w-100">
+                            <div class="align-items-center col-5 d-flex d-lg-none justify-content-center">
+                                <img src="images/Logimark_logoCMYK-2.png" width="100%"/> 
+                            </div>
+                            <div class="col-7 col-lg-12 d-flex flex-row justify-content-end">
+                                <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">Stäng</button>                                 
+                            </div>
+                        </div>                         
+                    </div>                     
+                </div>                 
+            </div>             
+        </div>
         <!-- Wrapper = Do not delete! It holds the whole design together -->
         <!-- ================================================= -->
         <div id="wrapper" title="main-container" class="container-fluid m-0 p-0">
@@ -198,11 +261,13 @@
             <!-- Button container-->
             <!-- ============== -->
             <div class="button-container container-fluid ">
-                <div class="align-items-center d-flex flex-row h-100 justify-content-center row vw-100">
-                    <div class="align-items-lg-center col-8 col-lg-12 col-sm-4 d-flex d-lg-flex flex-column flex-lg-row h-auto justify-content-center justify-content-lg-center"> 
+                <div class="align-items-center align-items-lg-center d-flex d-lg-flex flex-column flex-lg-row h-100 justify-content-center justify-content-lg-center row vw-100">
+                    <div class="align-items-lg-center col-8 col-lg-12 col-sm-4 d-flex d-lg-flex flex-column flex-lg-row h-auto justify-content-center justify-content-lg-center"> <a href="/adminprinters"><button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#add-to-database-modal" title="Lägg till en ny artikel i databasen.">Admin</button></a>
                         <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#add-to-database-modal" title="Lägg till en ny artikel i databasen.">Lägg till</button>
-                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#support-modal" title="Kontakta oss på Logimark">Support</button>
-                        <a href="login.html"><button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#login-modal">Logga in</button></a>
+                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#support-modal" title="Kontakta oss på Logimark">Support</button><a href="login.html"><button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#login-modal">Logga in</button></a>
+                    </div>
+                    <div class="align-items-lg-center col-12 col-lg-4 col-sm-6 col-xl-3 col-xxl-2 d-flex d-lg-flex flex-column flex-lg-row h-auto justify-content-center justify-content-lg-center"> 
+                        <input type="search" class="form-control form-control-lg" placeholder="Sök efter artikel" aria-label="Username" aria-describedby="basic-addon1"/>
                     </div>
                 </div>
             </div>
@@ -213,7 +278,6 @@
                     <thead class="text-uppercase"> 
                         <tr> 
                             <th scope="col">Egenskaper</th>
-                            <th scope="col">ID</th>
                             <th scope="col">Artikelnamn</th> 
                             <th scope="col">Artikelnummer</th> 
                             <th scope="col">Produkttyp</th>
@@ -222,9 +286,7 @@
                     </thead>                     
                     <tbody> 
                         <tr> 
-                            <td><a href="/adminprinters"><svg xmlns="http://www.w3.org/2000/svg" width="1.6em" height="1.6em" fill="currentColor" class="bi bi-gear-fill me-3 ms-3" viewBox="0 0 16 16">
-                                        <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"/>
-                                    </svg></a>
+                            <td><a href="/adminprinters"></a>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" fill="currentColor" class="bi bi-tools  me-3 ms-3" viewBox="0 0 16 16" data-bs-toggle="modal" data-bs-target="#change-database-modal">
                                     <path d="M1 0 0 1l2.2 3.081a1 1 0 0 0 .815.419h.07a1 1 0 0 1 .708.293l2.675 2.675-2.617 2.654A3.003 3.003 0 0 0 0 13a3 3 0 1 0 5.878-.851l2.654-2.617.968.968-.305.914a1 1 0 0 0 .242 1.023l3.356 3.356a1 1 0 0 0 1.414 0l1.586-1.586a1 1 0 0 0 0-1.414l-3.356-3.356a1 1 0 0 0-1.023-.242L10.5 9.5l-.96-.96 2.68-2.643A3.005 3.005 0 0 0 16 3c0-.269-.035-.53-.102-.777l-2.14 2.141L12 4l-.364-1.757L13.777.102a3 3 0 0 0-3.675 3.68L7.462 6.46 4.793 3.793a1 1 0 0 1-.293-.707v-.071a1 1 0 0 0-.419-.814L1 0zm9.646 10.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708zM3 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026L3 11z"/>
                                 </svg>
@@ -235,8 +297,7 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" class="bi bi-x-square-fill me-3 ms-3" viewBox="0 0 16 16" fill="currentColor" title="Radera denna artiklen från databasen">
                                     <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z"/>
                                 </svg>
-                            </td>
-                            <td>1</td> 
+                            </td>                             
                             <td>Salladskyckling</td> 
                             <td>578961</td>
                             <td>Färdiggrillat</td>
@@ -244,9 +305,6 @@
                         </tr>
                         <tr> 
                             <td>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="1.6em" height="1.6em" fill="currentColor" class="bi bi-gear-fill me-3 ms-3" viewBox="0 0 16 16">
-                                    <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"/>
-                                </svg>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" fill="currentColor" class="bi bi-tools me-3 ms-3" viewBox="0 0 16 16" data-bs-target="#change-database-modal" data-bs-toggle="modal">
                                     <path d="M1 0 0 1l2.2 3.081a1 1 0 0 0 .815.419h.07a1 1 0 0 1 .708.293l2.675 2.675-2.617 2.654A3.003 3.003 0 0 0 0 13a3 3 0 1 0 5.878-.851l2.654-2.617.968.968-.305.914a1 1 0 0 0 .242 1.023l3.356 3.356a1 1 0 0 0 1.414 0l1.586-1.586a1 1 0 0 0 0-1.414l-3.356-3.356a1 1 0 0 0-1.023-.242L10.5 9.5l-.96-.96 2.68-2.643A3.005 3.005 0 0 0 16 3c0-.269-.035-.53-.102-.777l-2.14 2.141L12 4l-.364-1.757L13.777.102a3 3 0 0 0-3.675 3.68L7.462 6.46 4.793 3.793a1 1 0 0 1-.293-.707v-.071a1 1 0 0 0-.419-.814L1 0zm9.646 10.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708zM3 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026L3 11z"/>
                                 </svg>
@@ -257,8 +315,7 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" class="bi bi-x-square-fill me-3 ms-3" viewBox="0 0 16 16" fill="currentColor" title="Radera denna artiklen från databasen">
                                     <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z"/>
                                 </svg>
-                            </td>
-                            <td>2</td> 
+                            </td>                             
                             <td>Kycklingschnitzel</td> 
                             <td>578980</td>
                             <td>Fryst</td>
@@ -266,9 +323,6 @@
                         </tr>
                         <tr> 
                             <td>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="1.6em" height="1.6em" fill="currentColor" class="bi bi-gear-fill me-3 ms-3" viewBox="0 0 16 16">
-                                    <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"/>
-                                </svg>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" fill="currentColor" class="bi bi-tools me-3 ms-3" viewBox="0 0 16 16" data-bs-target="#change-database-modal" data-bs-toggle="modal">
                                     <path d="M1 0 0 1l2.2 3.081a1 1 0 0 0 .815.419h.07a1 1 0 0 1 .708.293l2.675 2.675-2.617 2.654A3.003 3.003 0 0 0 0 13a3 3 0 1 0 5.878-.851l2.654-2.617.968.968-.305.914a1 1 0 0 0 .242 1.023l3.356 3.356a1 1 0 0 0 1.414 0l1.586-1.586a1 1 0 0 0 0-1.414l-3.356-3.356a1 1 0 0 0-1.023-.242L10.5 9.5l-.96-.96 2.68-2.643A3.005 3.005 0 0 0 16 3c0-.269-.035-.53-.102-.777l-2.14 2.141L12 4l-.364-1.757L13.777.102a3 3 0 0 0-3.675 3.68L7.462 6.46 4.793 3.793a1 1 0 0 1-.293-.707v-.071a1 1 0 0 0-.419-.814L1 0zm9.646 10.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708zM3 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026L3 11z"/>
                                 </svg>
@@ -279,8 +333,7 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" class="bi bi-x-square-fill me-3 ms-3" viewBox="0 0 16 16" fill="currentColor" title="Radera denna artiklen från databasen">
                                     <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z"/>
                                 </svg>
-                            </td>
-                            <td>3</td> 
+                            </td>                             
                             <td>Kycklingbröstfilé</td> 
                             <td>578972</td>
                             <td>Kycklingfilé</td>
