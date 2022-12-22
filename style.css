@@ -173,6 +173,13 @@ a:hover {
     text-align: center;
 }
 
+thead {
+    background-color: #161e3a;
+    color: #D2AA5A;
+    position: sticky;
+    top: 0;
+} 
+
 tbody tr:hover {
     background-color: #141e3c;
     color: #D2AA5A;
